@@ -3,17 +3,17 @@ name: Build and Deploy
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 12 * * 1"
+    branches: [main]
+
+permissions:
+  contents: write
 
 env:
   CI: false
   GITHUB_USERNAME: ${{ github.repository_owner }}
   REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   USE_GITHUB_DATA: "true"
-  MEDIUM_USERNAME: "surajrkhonde" # ✅ change to your Medium username
+  MEDIUM_USERNAME: "surajrkhonde"
 
 jobs:
   build-and-deploy:

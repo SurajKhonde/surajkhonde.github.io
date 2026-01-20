@@ -7,8 +7,7 @@ const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA === "true";
 const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
 
-const OUT_DIR = path.resolve(__dirname, "..", "public");
-
+const OUT_DIR = path.join(process.cwd(), "public");
 const ERR = {
   noUserName:
     "GITHUB_USERNAME is undefined. Please set it in your .env file.",
